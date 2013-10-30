@@ -5,9 +5,38 @@
 			%br
 			Craft Beer
 .content
-	%p 
-	
-%script{src: "http://codepen.io/assets/libs/fullpage/jquery.js"}
+	.card	
+		%p.stat_number 
+			17 
+		%p &#37; growth in retail dollars in the U.S. Beer Industry.
+
+		/ %i.fa.fa-arrow-circle-o-up
+	.card
+		%p.stat_number
+			13
+		%p million barrels of domestic craft beer sold.
+	.card
+		%p.stat_number
+			10
+		%p The average number of miles an American lives to a craft brewer.
+
+	#map
+	#alert
+.header.two
+	.bubbles
+		%h1.floating
+			%span Top 10 
+			%br
+			Craft Brewers
+.content.text
+	%p An American craft brewer is small, independent and traditional.
+
+
 %script{src: "app.js"}
-%script{src: "us-map.js"}
-%script{src: "raphael-min.js"}
+%script{src: "lib/raphael.js"}
+%script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"}
+%script{src: "color.jquery.js"}
+%script{src: "jquery.usmap.js"}
+%script{src: "bootstrap.js"}
+
+

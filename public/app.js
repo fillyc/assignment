@@ -80,7 +80,73 @@ bubbles();
 
 // -----------------   END OF BUBBLES
 
+// ------------------- STATISTICS COUNTING UPWARDS
+
+  function count($this){
+       var current = parseInt($this.html(), 10);
+       $this.html(++current);
+       if(current !== $this.data('count')){
+           setTimeout(function(){count($this)}, 75);
+       }
+   }        
+  $(".stat_number").each(function() {
+      $(this).data('count', parseInt($(this).html(), 10));
+      $(this).html('0');
+      count($(this));
+  });
+
+// ------------------- END OF STATISTICS COUNTING UPWARDS
+
+
+// ------------------- US MAP
 $(document).ready(function() {
-    $('#map').usmap({});
+    $('#map').usmap({
+
+      'stateSpecificStyles': {
+        'AK' : {fill: '#cfba7c'}
+
+      },
+      'stateSpecificHoverStyles': {
+        'HI' : {fill: '#fff'}
+      },
+      
+      'mouseoverState': {
+        'Washington' : function(event, data) {
+          $('#alert')
+          .text('WASHINGTON '+data.name+' on map 1')
+          .stop()
+          .css('height', '200px','backgroundColor', '#fff', 'display', 'block')
+          .animate({backgroundColor: '#a8861f'}, 1000);
+        }
+        
+      },
+      
+
+
+
+      'click' : function(event, data) {
+        $('#alert')
+          .text('Click '+data.name+' on map 1')
+          .stop()
+          .css('backgroundColor', '#fff')
+          .animate({backgroundColor: '#a8861f'}, 1000);
+      }
+
+   
+
+
+    });
+    
+    $('#map').usmap({
+      stateStyles: {fill: '#a8861f'}
+    });
+    
+    $('#over-md').click(function(event){
+      $('#map').usmap('trigger', 'MD', 'mouseover', event);
+    });
+    
+    $('#out-md').click(function(event){
+      $('#map').usmap('trigger', 'MD', 'mouseout', event);
+    });
   });
 
