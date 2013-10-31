@@ -98,47 +98,100 @@ bubbles();
 // ------------------- END OF STATISTICS COUNTING UPWARDS
 
 
-// ------------------- US MAP
+// ------------------- US MAP ---------------------
+
 $(document).ready(function() {
     $('#map').usmap({
 
       'stateSpecificStyles': {
-        'AK' : {fill: '#cfba7c'}
+        
+        'Wisconsin' : {fill: '#733A06'},
+        'NewYork' : {fill: '#85670f'},
+        'Pennsylvania' : {fill: '#85670f'},
+        'Hawaii': {fill: '#513e04'},
+        'Alaska': {fill: '#eeca5d'},
+        'Florida': {fill: '#bb8d02'},
+        'SouthCarolina': {fill: '#eeca5d'},
+        'Georgia': {fill: '#eeca5d'},
+        'Alabama': {fill: '#eeca5d'},
+        'NorthCarolina': {fill: '#bb8d02'},
+        'Tennessee': {fill: '#eeb818'},
+        'RhodeIsland': {fill: '#ffe69c'},
+        'Connecticut': {fill: '#eeca5d'},
+        'Massachusetts': {fill: '#eeb818'},
+        'Maine': {fill: '#eeb818'},
+        'NewHampshire': {fill: '#eeca5d'},
+        'Vermont': {fill: '#eeb818'},
+        'NewYork': {fill: '#85670f'},
+        'NewJersey': {fill: '#eeb818'},
+        'Pennsylvania': {fill: '#85670f'},
+        'Delaware': {fill: '#ffe69c'},
+        'Maryland': {fill: '#eeb818'},
+        'WestVirginia': {fill: '#ffe69c'},
+        'Kentucky': {fill: '#eeca5d'},
+        'Ohio': {fill: '#bb8d02'},
+        'Michigan': {fill: '#85670f'},
+        'Wyoming': {fill: '#eeca5d'},
+        'Montana': {fill: '#eeb818'},
+        'Idaho': {fill: '#eeb818'},
+        'Washington': {fill: '#513e04'},
+        'Texas': {fill: '#85670f'},
+        'California': {fill: '#513e04'},
+        'Arizona': {fill: '#eeb818'},
+        'Nevada': {fill: '#eeca5d'},
+        'Utah': {fill: '#eeca5d'},
+        'Colorado': {fill: '#513e04'},
+        'NewMexico': {fill: '#eeb818'},
+        'Oregon': {fill: '#85670f'},
+        'NorthDakota': {fill: '#ffe69c'},
+        'SouthDakota': {fill: '#ffe69c'},
+        'Nebraska': {fill: '#eeca5d'},
+        'Iowa': {fill: '#eeb818'},
+        'Mississippi': {fill: '#ffe69c'},
+        'Indiana': {fill: '#bb8d02'},
+        'Illinois': {fill: '#bb8d02'},
+        'Minnesota': {fill: '#eeb818'},
+        'Wisconsin': {fill: '#85670f'},
+        'Missouri': {fill: '#eeb818'},
+        'Arkansas': {fill: '#eeca5d'},
+        'Oklahoma': {fill: '#eeca5d'},
+        'Kansas': {fill: '#eeca5d'},
+        'Louisiana': {fill: '#ffe69c'},
+        'Virginia': {fill: '#eeb818'},
+        'DistrictofColumbia': {fill: '#733A06'}
 
       },
-      'stateSpecificHoverStyles': {
-        'HI' : {fill: '#fff'}
-      },
-      'stateSpecificStyles': {
-        'WA' : {fill: '#000'}
+      
 
-      },
       
       'mouseoverState': {
         'Washington' : function(event, data) {
-          $('#alert')
-          .text('WASHINGTON '+data.name+' on map 1')
+          $('#alert h2')
+          .text(data.name)
           .stop()
-          .css('height', '200px','backgroundColor', '#fff', 'display', 'block')
-          .animate({backgroundColor: '#a8861f'}, 1000);
+          $('#alert h3')
+          .text('Rank #1')
+          .stop()
+          $('#alert p')
+          .text('Total brewerys')
+          .stop()
+          // .css('height', '200px','backgroundColor', '#fff', 'display', 'block')
+          // .animate({backgroundColor: '#a8861f'}, 1000);
         }
+
         
       },
+
       
-
-
-
       'click' : function(event, data) {
         $('#alert')
           .text(data.name)
           .stop()
-          .css('backgroundColor', '#fff')
-          .animate({backgroundColor: '#a8861f'}, 1000);
+          .css('backgroundColor', '#eee')
+          .animate({backgroundColor: '#ffe69c'}, 1000);
       }
 
    
-
-
     });
     
     $('#map').usmap({
@@ -185,6 +238,5 @@ $(document).ready(function() {
       $('.accordionContent').hide();
       $( "#open" ).trigger( "click" );
 
-
-
+$('.carousel').carousel()
 

@@ -22,6 +22,9 @@
 
 	#map
 	#alert
+		%h2#stateName
+		%h3#rank
+		%p
 	.text
 		%p An American craft brewer is small, independent and traditional.
 		#accordion
@@ -34,6 +37,28 @@
 			.accordionButton Traditional
 			.accordionContent
 				A brewer who has either an all malt flagship (the beer which represents the greatest volume among that 	brewers brands) or has at least 50% of its volume in either all malt beers or in beers which use adjuncts to 	enhance rather than lighten flavor.
+	
+	%h1
+		%span	Craft Beer 
+		%br
+		Belfast
+	%p.belfast 
+		Jonny Campbell, Ali Sisk and myself worked on a little side project to encourage BrewDog to open a pub in Belfast. Jonny and Ali deisgned, and wrote the copy for, four fictional beers with a Belfast theme. 
+
+	#myCarousel.carousel
+		/ Carousel items
+		.carousel-inner
+			.active.item
+				%img{alt: "BrewDog", height: "", src: "brewdog1.jpg", width: "600"}
+			.item
+				%img{alt: "BrewDog", height: "", src: "brewdog2.jpg", width: "600"}
+			.item
+				%img{alt: "BrewDog", height: "", src: "brewdog3.jpg", width: "600"}
+			.item
+				%img{alt: "BrewDog", height: "", src: "brewdog4.jpg", width: "600"}
+		/ Carousel nav
+		%a.carousel-control.left{"data-slide" => "prev", href: "#myCarousel"} ‹
+		%a.carousel-control.right{"data-slide" => "next", href: "#myCarousel"} ›
 
 / .header.two
 / 	.bubbles
@@ -47,6 +72,7 @@
 %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"}
 %script{src: "color.jquery.js"}
 %script{src: "jquery.usmap.js"}
-%script{src: "bootstrap.js"}
+%script{src: "carousel.js"}
+
 
 
