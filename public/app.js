@@ -109,6 +109,10 @@ $(document).ready(function() {
       'stateSpecificHoverStyles': {
         'HI' : {fill: '#fff'}
       },
+      'stateSpecificStyles': {
+        'WA' : {fill: '#000'}
+
+      },
       
       'mouseoverState': {
         'Washington' : function(event, data) {
@@ -126,7 +130,7 @@ $(document).ready(function() {
 
       'click' : function(event, data) {
         $('#alert')
-          .text('Click '+data.name+' on map 1')
+          .text(data.name)
           .stop()
           .css('backgroundColor', '#fff')
           .animate({backgroundColor: '#a8861f'}, 1000);
@@ -149,4 +153,38 @@ $(document).ready(function() {
       $('#map').usmap('trigger', 'MD', 'mouseout', event);
     });
   });
+
+
+    
+    $( "#accordion" ).accordion();
+
+    //ACCORDION BUTTON ACTION (ON CLICK DO THE FOLLOWING)
+      $('.accordionButton').click(function() {
+
+        //REMOVE THE ON CLASS FROM ALL BUTTONS
+        $('.accordionButton').removeClass('on');
+          
+        //NO MATTER WHAT WE CLOSE ALL OPEN SLIDES
+        $('.accordionContent').slideUp('normal');
+       
+        //IF THE NEXT SLIDE WASN'T OPEN THEN OPEN IT
+        if($(this).next().is(':hidden') == true) {
+          
+          //ADD THE ON CLASS TO THE BUTTON
+          $(this).addClass('on');
+            
+          //OPEN THE SLIDE
+          $(this).next().slideDown('normal');
+         } 
+          
+       });     
+      
+      /********************************************************************************************************************
+      CLOSES ALL S ON PAGE LOAD
+      ********************************************************************************************************************/ 
+      $('.accordionContent').hide();
+      $( "#open" ).trigger( "click" );
+
+
+
 

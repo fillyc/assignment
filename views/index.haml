@@ -22,15 +22,25 @@
 
 	#map
 	#alert
-.header.two
-	.bubbles
-		%h1.floating
-			%span Top 10 
-			%br
-			Craft Brewers
-.content.text
-	%p An American craft brewer is small, independent and traditional.
+	.text
+		%p An American craft brewer is small, independent and traditional.
+		#accordion
+			.accordionButton Small
+			#open.accordionContent
+				Annual production of 6 million barrels of beer or less. Beer production is attributed to a brewer according 	to the rules of alternating proprietorships. Flavored malt beverages are not considered beer for purposes of 	this definition.
+			.accordionButton Independent
+			.accordionContent
+				Less than 25% of the craft brewery is owned or controlled (or equivalent economic interest) by an alcoholic 	beverage industry member who is not themselves a craft brewer.
+			.accordionButton Traditional
+			.accordionContent
+				A brewer who has either an all malt flagship (the beer which represents the greatest volume among that 	brewers brands) or has at least 50% of its volume in either all malt beers or in beers which use adjuncts to 	enhance rather than lighten flavor.
 
+/ .header.two
+/ 	.bubbles
+/ 		%h1.floating
+/ 			%span Top 10 
+/ 			%br
+/ 			Craft Brewers
 
 %script{src: "app.js"}
 %script{src: "lib/raphael.js"}

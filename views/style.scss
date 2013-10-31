@@ -136,7 +136,7 @@ h2{
   background-image: linear-gradient(top, #ba921a, #B98C05);
   // margin-bottom:-90px;
 }
-.header.two{margin-top:-200px;}
+.header.two{margin-top:200px;}
 
 .content{
   height:1000px;
@@ -144,15 +144,33 @@ h2{
   margin:auto;
 }
 
+p{
+  font-family: "bree-serif",sans-serif;
+}
+
+
 .text{
-  padding:40px;
+  margin:auto;
+  width: 640px;
+  color:#3D4D42;
   p{
-    font-size:5em;
+    margin-top:60px;
+    margin-bottom:30px;
+    font-size: 4em;
+    line-height: 40px;
+    text-align: center;
   }
 }
 
-p{
+ul li{
   font-family: "bree-serif",sans-serif;
+  font-size:3em;
+  padding-top: 40px;
+  font-weight: 200;
+  line-height: 30px;
+  span{
+    font-weight:400;
+  }
 }
 
 .card{
@@ -391,4 +409,33 @@ p.stat_number{
     100%{-moz-transform:rotate(-3deg)}     
 }
 
-
+#accordion{
+  margin:auto;
+  overflow:hidden;
+}
+.accordionButton {  
+  width: 600px;
+  height:30px;
+  font-family: "bree-serif",sans-serif;
+  font-size:2em;
+  font-weight:400;
+  line-height:30px;
+  border-radius:0px;
+  float: left;
+  _float: none;  /* Float works in all browsers but IE6 */
+  background: #eee;
+  border-bottom: 1px solid #FFFFFF;
+  cursor: pointer;
+  }
+  
+.accordionContent { 
+  width: 546px;
+  font-family: "bree-serif",sans-serif;
+  font-size:3em;
+  font-weight:200;
+  line-height:33px;
+  float: left;
+  _float: none; /* Float works in all browsers but IE6 */
+  background: #fff;
+  border-radius:0px;
+  }
