@@ -1,13 +1,4 @@
-$(document).ready(function() {
-
-
-    // ____  _    _ ____  ____  _      ______  _____ 
-   // |  _ \| |  | |  _ \|  _ \| |    |  ____|/ ____|
-   // | |_) | |  | | |_) | |_) | |    | |__  | (___  
-   // |  _ <| |  | |  _ <|  _ <| |    |  __|  \___ \ 
-   // | |_) | |__| | |_) | |_) | |____| |____ ____) |
-   // |____/ \____/|____/|____/|______|______|_____/
-
+// -----------   Rising bubbles
 
 var $bubbles = $('.bubbles');
 
@@ -87,13 +78,9 @@ $('.bubble-toggle').click(function(){
 
 bubbles();
 
+// -----------------   END OF BUBBLES
 
-  // _____ _______    _______ _____  _____ _______ _____ _____  _____ 
- // / ____|__   __|/\|__   __|_   _|/ ____|__   __|_   _/ ____|/ ____|
-// | (___    | |  /  \  | |    | | | (___    | |    | || |    | (___  
- // \___ \   | | / /\ \ | |    | |  \___ \   | |    | || |     \___ \ 
- // ____) |  | |/ ____ \| |   _| |_ ____) |  | |   _| || |____ ____) |
-// |_____/   |_/_/    \_\_|  |_____|_____/   |_|  |_____\_____|_____/
+// ------------------- STATISTICS COUNTING UPWARDS
 
   function count($this){
        var current = parseInt($this.html(), 10);
@@ -108,17 +95,12 @@ bubbles();
       count($(this));
   });
 
+// ------------------- END OF STATISTICS COUNTING UPWARDS
 
 
- // _    _  _____   __  __          _____  
-// | |  | |/ ____| |  \/  |   /\   |  __ \ 
-// | |  | | (___   | \  / |  /  \  | |__) |
-// | |  | |\___ \  | |\/| | / /\ \ |  ___/ 
-// | |__| |____) | | |  | |/ ____ \| |     
- // \____/|_____/  |_|  |_/_/    \_\_|     
+// ------------------- US MAP ---------------------
 
-
-
+$(document).ready(function() {
     $('#map').usmap({
 
       'stateSpecificStyles': {
@@ -182,20 +164,20 @@ bubbles();
       
 
       
-      // 'mouseoverState': {
-      //   'Washington' : function(event, data) {
-      //     $('#alert h2')
-      //     .text(data.name)
-      //     .stop()
-      //     $('#alert h3')
-      //     .text('Rank #1')
-      //     .stop()
-      //     $('#alert p')
-      //     .text('Total brewerys')
-      //     .stop()
-      //     // .css('height', '200px','backgroundColor', '#fff', 'display', 'block')
-      //     // .animate({backgroundColor: '#a8861f'}, 1000);
-      //   }
+      'mouseoverState': {
+        'Washington' : function(event, data) {
+          $('#alert h2')
+          .text(data.name)
+          .stop()
+          $('#alert h3')
+          .text('Rank #1')
+          .stop()
+          $('#alert p')
+          .text('Total brewerys')
+          .stop()
+          // .css('height', '200px','backgroundColor', '#fff', 'display', 'block')
+          // .animate({backgroundColor: '#a8861f'}, 1000);
+        }
 
         
       },
@@ -223,17 +205,10 @@ bubbles();
     $('#out-md').click(function(event){
       $('#map').usmap('trigger', 'MD', 'mouseout', event);
     });
+  });
 
 
-
-          // _____ _____ ____  _____  _____ _____ ____  _   _ 
-    // /\   / ____/ ____/ __ \|  __ \|  __ \_   _/ __ \| \ | |
-   // /  \ | |   | |   | |  | | |__) | |  | || || |  | |  \| |
-  // / /\ \| |   | |   | |  | |  _  /| |  | || || |  | | . ` |
- // / ____ \ |___| |___| |__| | | \ \| |__| || || |__| | |\  |
-// /_/    \_\_____\_____\____/|_|  \_\_____/_____\____/|_| \_|
     
-
     $( "#accordion" ).accordion();
 
     //ACCORDION BUTTON ACTION (ON CLICK DO THE FOLLOWING)
@@ -263,22 +238,6 @@ bubbles();
       $('.accordionContent').hide();
       $( "#open" ).trigger( "click" );
 
-
-   // _____          _____   ____  _    _  _____ ______ _      
-  // / ____|   /\   |  __ \ / __ \| |  | |/ ____|  ____| |     
- // | |       /  \  | |__) | |  | | |  | | (___ | |__  | |     
- // | |      / /\ \ |  _  /| |  | | |  | |\___ \|  __| | |     
- // | |____ / ____ \| | \ \| |__| | |__| |____) | |____| |____ 
-  // \_____/_/    \_\_|  \_\\____/ \____/|_____/|______|______|
-
-
-
 $('.carousel').carousel()
-
-$('#tab-container').easytabs();
-
-
-
-});
 
 

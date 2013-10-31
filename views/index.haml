@@ -19,12 +19,32 @@
 		%p.stat_number
 			10
 		%p The average number of miles an American lives to a craft brewer.
-
+	%h3 Total Craft brewerys per state
 	#map
 	#alert
 		%h2#stateName
 		%h3#rank
 		%p
+	.key
+		
+		#key
+		%h3 &#062; 150 Craft brewerys
+		%br	
+		#key.second-key
+		%h3 &#062; 85 Craft brewerys	
+		%br
+		#key.third-key
+		%h3 &#062; 55 Craft brewerys
+		%br
+		#key.fourth-key
+		%h3 &#062; 30 Craft brewerys
+		%br
+		#key.fifth-key
+		%h3 &#062; 15 Craft brewerys
+		%br
+		#key.sixth-key
+		%h3 &#060; 10 Craft brewerys
+
 	.text
 		%p An American craft brewer is small, independent and traditional.
 		#accordion
@@ -37,29 +57,75 @@
 			.accordionButton Traditional
 			.accordionContent
 				A brewer who has either an all malt flagship (the beer which represents the greatest volume among that 	brewers brands) or has at least 50% of its volume in either all malt beers or in beers which use adjuncts to 	enhance rather than lighten flavor.
-	
-	%h1
+	#tabwrap
+		%ul#tabs
+			%li.current
+				%a{href: "#dogfish"} Dogfish Head Brewery
+			%li
+				%a{href: "#stone"} Stone Brewing Company
+			%li
+				%a{href: "#sierra"} Sierra Nevada
+			%li
+				%a{href: "#odell"} Odell Brewing Company
+		#content
+			#dogfish.current.animated.fadeIn
+				%img{alt: "Dogfish", height: "", src: "img/dogfish.jpg", width: "500",style: "margin-left:85px;margin-bottom:20px;margin-top:20px;"}
+				%p Dogfish Head, Milton, Del.: In the brewery business for almost two decades, Dogfish Head is one of the most popular breweries in the country. It was Delaware’s first brewpub, and when it opened in 1995, was the smallest commercial brewery in America. But, this small brewery now packs a giant punch, as they now operate out of a 100,000-square-foot converted cannery and sell their beer, including their original 60 Minute IPA, to more than 25 states. Under the direction of Sam Calagione, Dogfish Head will continue to be the gamechanger — and leader — when it comes to the world of craft beer. "When I think of 'craft beer,' Dogfish Head is the first brewery that pops into my head," says Jason Morgan, the founding partner of Craft Beer Business. "Their creativity and dedication to the craft beer tradition is inspiring."
+
+			#stone.animated.fadeIn
+				%img{alt: "Stone", height: "", src: "img/stone.jpg", width: "500",style: "margin-left:85px;margin-bottom:40px;margin-top:40px;"}
+				%p Stone Brewing Company, Escondido, Calif.: There are more than enough accolades and recognition for this Californian brewery. 'No brewery in San Diego — and perhaps the world — pushes more envelopes or thinks outside so many boxes,' says Peter Lowe of UT San Diego. If topping the 2008 list of All-Time Top Breweries on Planet Earth by Beer Advocate isn’t enough for you, perhaps a bit more information will convince you that Stone Brewing Company is one of the best craft breweries in America. Stone Brewing Company is the 10th largest brewery in the United States, with 55,000 square feet. The 99-rating on Beer Advocate calls this brewery "World Class." And it’s beloved for much more than the beer. "I love Stone's attitude as much as I love their beer," says Jason Morgan of Craft Beer Business. "Big and bold, their craft beer always sticks with you long after the six-pack is gone."
+			#sierra.animated.fadeIn
+				%img{alt: "Sierra", height: "", src: "img/sierra.jpg", width: "500",style: "margin-left:85px;margin-bottom:20px;margin-top:20px;"}
+				%p Sierra Nevada, Chico, Calif.: Sierra Nevada beers mimic the mountains for which they are named, "bold, wild, and unwavering as those storied granite peaks," according to their website. Sierra Nevada brews use only the best ingredients, are created by traditional techniques, and are made by brewers who pay close attention to detail. The "Hop Torpedo," a stainless steel device packed with whole, cone hops, is the brewery’s unique way of adding hop aroma to beer with no additional bitterness. Because of it, the Hop Tornado and Sierra Nevada get credit "for putting hoppy pale ale on the map for American craft beer drinkers," says Lucy Saunders, the author of five craft beer cookbooks. Sierra Nevada is a "big boy that stays true to classic products," says Peter LaFrance of Beer Basics, a food and beer blog. 
+			#odell.animated.fadeIn
+				%img{alt: "Odell", height: "", src: "img/odell.png", width: "300",style: "margin-left:180px;margin-bottom:20px;margin-top:20px;"}
+				%p Odell Brewing Company, Fort Collins, Colo.: More than two decades ago, this Odell family of "beer-centric" people began a craft brewery north of Denver. Sure, there might be another Fort Collins, Colo., brewery that gets more attention (look further down our list to find out who), but Odell is the darling of the Colorado brew scene. "While another larger brewery in Fort Collins gets most of the notice, Odell chugs along making some spectacularly delicious beers," says Mike Sweeney of St. Louis Hops. "Odell IPA puts a lot of West Coast breweries to shame with a perfect balance of hops and malt and then they double the effort with Myrcenary. They also try and push the boundaries of beer with their Cellar and Woodcut series and even when Odell tries and fails, you have to appreciate the effort." Today, the brewery has completed its fourth expansion and sponsors charities through its Odell Outreach.
+
+	%h1.belfast
 		%span	Craft Beer 
 		%br
 		Belfast
 	%p.belfast 
-		Jonny Campbell, Ali Sisk and myself worked on a little side project to encourage BrewDog to open a pub in Belfast. Jonny and Ali deisgned, and wrote the copy for, four fictional beers with a Belfast theme. 
+		%a.tooltip{href: "https://twitter.com/jonnycampbell", title:"Belfast-based designer, teacher, and strategist"} Jonny Campbell
+		,
+		%a.tooltip{href: "https://twitter.com/alisisk", title:"Mobile UI Designer. Creator of @iconvault. Working @CargoHQ as interface designer on @Brewbot."} Ali Sisk 
+		and myself worked on a little side project to encourage 
+		%a.tooltip{href: "https://twitter.com/brewdog", title:"BrewDog is Scotland's largest independently owned brewery producing about 120,000 bottles per month for export all over the world."} BrewDog 
+		to open a pub in Belfast. Jonny and Ali deisgned, and wrote the copy for, four fictional beers with a Belfast theme. 
+	
+	
 
 	#myCarousel.carousel
 		/ Carousel items
 		.carousel-inner
 			.active.item
-				%img{alt: "BrewDog", height: "", src: "brewdog1.jpg", width: "600"}
+				%img{alt: "BrewDog", height: "", src: "img/brewdog1.jpg", width: "980"}
+				.carousel-caption
+					%h4 Albert's Ale
 			.item
-				%img{alt: "BrewDog", height: "", src: "brewdog2.jpg", width: "600"}
+				%img{alt: "BrewDog", height: "", src: "img/brewdog2.jpg", width: "980"}
+				.carousel-caption
+					%h4 Samson &amp Goliath
 			.item
-				%img{alt: "BrewDog", height: "", src: "brewdog3.jpg", width: "600"}
+				%img{alt: "BrewDog", height: "", src: "img/brewdog3.jpg", width: "980"}
+				.carousel-caption
+					%h4 The Maiden Voyage
 			.item
-				%img{alt: "BrewDog", height: "", src: "brewdog4.jpg", width: "600"}
+				%img{alt: "BrewDog", height: "", src: "img/brewdog4.jpg", width: "980"}
+				.carousel-caption
+					%h4 Belfast Bomb
 		/ Carousel nav
-		%a.carousel-control.left{"data-slide" => "prev", href: "#myCarousel"} ‹
-		%a.carousel-control.right{"data-slide" => "next", href: "#myCarousel"} ›
-
+		%a.carousel-control.left{"data-slide" => "prev", href: "#myCarousel"}
+			%i.fa.fa-caret-square-o-left
+		%a.carousel-control.right{"data-slide" => "next", href: "#myCarousel"}
+			%i.fa.fa-caret-square-o-right
+	.quote
+		%p 
+			"Good people drink good beer."
+			%br
+			%span Hunter S. Thompson
+	
 / .header.two
 / 	.bubbles
 / 		%h1.floating
@@ -67,12 +133,14 @@
 / 			%br
 / 			Craft Brewers
 
-%script{src: "app.js"}
+%script{src: "lib/app.js"}
 %script{src: "lib/raphael.js"}
-%script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"}
-%script{src: "color.jquery.js"}
-%script{src: "jquery.usmap.js"}
-%script{src: "carousel.js"}
+%script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"}
+%script{src: "lib/color.jquery.js"}
+%script{src: "lib/jquery.usmap.js"}
+%script{src: "lib/carousel.js"}
+%script{src: "lib/tooltip.js"}
+%script{src: "lib/tabs.js"}
 
 
 
